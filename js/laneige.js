@@ -1,9 +1,12 @@
 $(document).ready(function(){
     $(".gnb01").on("mouseover",function(){
-        $(".sub-menu01").stop().show();               
+        $(".sub-menu01").stop().show();  
+        $(".sub-menu-inner").stop().hide(); 
+        $(".sub-menu-inner2").stop().hide();
+        $(".sub-menu-inner3").stop().hide();
     });
     $(".gnb01").on("mouseover",function(){
-        $(".header-bottom").stop().show();                  
+        $(".header-bottom").stop().show();                 
     });
     $(".gnb01").on("mouseout",function(){
         $(".sub-menu01").stop().hide();               
@@ -13,7 +16,10 @@ $(document).ready(function(){
     });
     
     $(".gnb02").on("mouseover",function(){
-        $(".sub-menu02").stop().show();               
+        $(".sub-menu02").stop().show();  
+        $(".sub-menu-inner").stop().hide(); 
+        $(".sub-menu-inner2").stop().hide();
+        $(".sub-menu-inner3").stop().hide();
     });
     $(".gnb02").on("mouseover",function(){
         $(".header-bottom").stop().show();                  
@@ -26,42 +32,36 @@ $(document).ready(function(){
     });
 
     $(".gnb03").on("mouseover",function(){
-        $(".sub-menu-inner").stop().show();               
+        $(".sub-menu-inner").stop().show(); 
+        $(".sub-menu-inner2").stop().hide();
+        $(".sub-menu-inner3").stop().hide();
     });
     $(".gnb03").on("mouseover",function(){
         $(".header-bottom2").stop().show();                  
     });
-    $(".gnb03").on("mouseout",function(){
-        $(".sub-menu-inner").stop().hide();               
-    });
-    $(".gnb03").on("mouseout",function(){
-        $(".header-bottom2").stop().hide();                  
-    });
     
     $(".gnb04").on("mouseover",function(){
-        $(".sub-menu-inner2").stop().show();               
+        $(".sub-menu-inner2").stop().show();
+        $(".sub-menu-inner").stop().hide(); 
+        $(".sub-menu-inner3").stop().hide();
     });
     $(".gnb04").on("mouseover",function(){
         $(".header-bottom3").stop().show();                  
     });
-    $(".gnb04").on("mouseout",function(){
-        $(".sub-menu-inner2").stop().hide();               
-    });
-    $(".gnb04").on("mouseout",function(){
-        $(".header-bottom3").stop().hide();                  
-    });
     
     $(".gnb05").on("mouseover",function(){
-        $(".sub-menu-inner3").stop().show();               
+        $(".sub-menu-inner3").stop().show(); 
+        $(".sub-menu-inner").stop().hide(); 
+        $(".sub-menu-inner2").stop().hide();
     });
     $(".gnb05").on("mouseover",function(){
         $(".header-bottom3").stop().show();                  
     });
-    $(".gnb05").on("mouseout",function(){
-        $(".sub-menu-inner3").stop().hide();               
-    });
-    $(".gnb05").on("mouseout",function(){
-        $(".header-bottom3").stop().hide();                  
+   
+     $(".gnb06").on("mouseover",function(){ 
+        $(".sub-menu-inner").stop().hide(); 
+        $(".sub-menu-inner2").stop().hide();
+        $(".sub-menu-inner3").stop().hide();
     });
     
     $(".slide-group").slick({		//슬릭 초기화 구문
@@ -75,4 +75,3 @@ $(document).ready(function(){
 
 });
                   
-                
