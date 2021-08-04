@@ -22,7 +22,7 @@ header{
     margin: auto;
 }
 .logo{
-    position: absolute;
+    position: absolute;        /* inline block 줬을때는 float말고 absolute로 */
     height: 60px;
     line-height: 65px;
     z-index: 100;
@@ -39,10 +39,59 @@ nav>ul>li{
     display: inline-block;    /* li 가운데 정렬하려면 */
 }
 nav>ul>li>a{
-    padding: 0 25px;
+    padding: 17px 25px;
     font-family: 'Gowun Dodum';
     font-size: 18px;
+    position: relative;
 }
+nav>ul>li>a:hover{
+    font-weight: bold;
+    color: dodgerblue;
+}
+nav>ul>li>a:before{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 0%;
+    background-color: dodgerblue;
+    transition: all 0.4s ease;
+}
+nav>ul>li>a:hover:before{
+    width: 100%;
+}
+nav>ul>li.gnb01 a:before{
+    left: 50%;
+    transform: translateX(-50%);
+}
+nav>ul>li.gnb02 a:before{
+    left: 50%;
+    transform: translateX(-50%);
+}
+nav>ul>li.gnb03 a:before{
+    left: 50%;
+    transform: translateX(-50%);
+}
+nav>ul>li.gnb04 a:before{
+    left: 50%;
+    transform: translateX(-50%);
+}
+nav>ul>li.gnb05 a:before{
+    left: 50%;
+    transform: translateX(-50%);
+}
+nav>ul>li.gnb06 a:before{
+    left: 50%;
+    transform: translateX(-50%);
+}
+.sub-menu01>li>a:hover{
+    font-weight: bold;
+}
+.sub-menu02>li>a:hover{
+    font-weight: bold;
+}
+
 header::after{
     content: "";
     display: block;
@@ -54,7 +103,7 @@ header::after{
     border-top: 1px solid #ddd;
     background-color: #f7f7f7;
     display: none;
-    position: absolute;
+    position: absolute;    /* 이거 해줘야 슬라이드가 gnb 밑으로 안내려감 */
     z-index: 10;
 }
 .sub-menu01{
@@ -103,6 +152,7 @@ header::after{
     position: absolute;
     left: 300px;
     margin-top: 10px;
+    z-index: 106;
     display: none;
 }
 .sub-menu03{
@@ -196,6 +246,7 @@ header::after{
     left: 300px;
     margin-top: 10px;
     display: none;
+    z-index: 107;
 }
 .header-bottom3{
     width: 100%;
@@ -214,6 +265,7 @@ header::after{
     left: 300px;
     margin-top: 10px;
     display: none;
+    z-index: 108;
 }
 #slide-container{
 	max-width: 100%;
@@ -221,4 +273,9 @@ header::after{
 #slide-container img{
 	max-width: 100%;
 }
-
+.all2:hover{
+    font-weight: bold;
+}
+.under:hover{
+    text-decoration: underline;
+}
